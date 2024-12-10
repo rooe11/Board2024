@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 글쓰기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>게시판 글쓰기</h1>
+        <form id="boardForm">
+            <label for="author">작성자:</label>
+            <input type="text" id="author" placeholder="작성자 입력" required>
+            <br>
+
+            <label for="title">제목:</label>
+            <input type="text" id="title" placeholder="제목 입력" required>
+            <br>
+
+            <label for="keyword">키워드:</label>
+            <input type="text" id="keyword" placeholder="키워드 입력">
+            <br>
+
+            <button type="button" id="addPostButton">글 작성</button>
+        </form>
+
+        <h2>게시글 목록</h2>
+        <ul id="postList"></ul>
+    </div>
+
+    <!-- 상세보기 모달 -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="modalTitle">상세보기</h2>
+            <p><strong>작성자:</strong> <span id="modalAuthor"></span></p>
+            <p><strong>제목:</strong> <span id="modalPostTitle"></span></p>
+            <p><strong>키워드:</strong> <span id="modalKeyword"></span></p>
+
+            <button id="editPostButton">수정</button>
+            <button id="deletePostButton">삭제</button>
+            <button id="recommendPostButton">추천</button>
+            <button id="closeModalButton">닫기</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

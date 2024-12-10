@@ -1,0 +1,199 @@
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; /* 밝고 상쾌한 색상 */
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 컨테이너 */
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* 알록달록한 그라디언트 배경 */
+}
+
+/* 제목 스타일 */
+h1, h2 {
+    color: #ffffff; /* 제목을 흰색으로 하여 밝고 깔끔한 느낌 */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* 폼 스타일 */
+form {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* 인풋 필드 스타일 */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ff7e5f; /* 인풋 테두리를 핑크색으로 */
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #feb47b; /* 포커스 시 오렌지 색상 */
+    box-shadow: 0 0 5px rgba(254, 180, 123, 0.5);
+}
+
+/* 버튼 스타일 */
+button {
+    padding: 12px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* 각 버튼 색상 */
+#addPostButton {
+    background-color: #4caf50; /* 초록색 버튼 */
+    color: white;
+}
+
+button.viewButton {
+    background-color: #2196f3; /* 파란색 버튼 */
+    color: white;
+}
+
+button.viewButton:hover {
+    background-color: #1e88e5;
+}
+
+#postList {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+#postList li {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+}
+
+#postList li:hover {
+    transform: scale(1.02); /* 항목에 호버 효과 추가 */
+    background-color: #f1f8e9; /* 호버 시 밝은 색상으로 변경 */
+}
+
+#postList li .postTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ff7e5f; /* 제목을 핑크색으로 */
+    margin-bottom: 10px;
+}
+
+#postList li .postContent {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#postList li .postAuthor {
+    font-size: 12px;
+    color: #888;
+}
+
+#postList li .viewButton {
+    align-self: flex-end;
+    background-color: #ff7e5f; /* 제목과 일치하는 색상 */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#postList li .viewButton:hover {
+    background-color: #feb47b; /* 버튼 색상 호버 */
+}
+
+/* 모달 디자인 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    transition: all 0.3s ease;
+}
+
+button#deletePostButton {
+    background-color: #f44336; /* 빨간색 */
+    color: white;
+    padding: 12px 24px;
+}
+
+button#editPostButton {
+    background-color: #ffc107; /* 노란색 */
+    color: white;
+    padding: 12px 24px;
+}
+
+button#recommendPostButton {
+    background-color: #2196f3; /* 파란색 */
+    color: white;
+    padding: 12px 24px;
+}
+
+button#closeModalButton {
+    background-color: #999999;
+    color: white;
+    padding: 12px 24px;
+}
+
+button:focus {
+    outline: none;
+}
